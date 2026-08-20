@@ -198,6 +198,28 @@ export function getProgram(slug: string) {
   return programs.find((program) => program.slug === slug);
 }
 
+type DenemePublisherHouse = {
+  name: string;
+  src?: string;
+  fit?: "contain" | "cover";
+  tone?: "ink" | "sun";
+};
+
+const denemePublisherHouses: DenemePublisherHouse[] = [
+  { name: "Özdebir", src: "/logo/yayinlar/ozdebir.png", fit: "contain" },
+  { name: "Töder", src: "/logo/yayinlar/toder.png", fit: "contain" },
+  { name: "Sinan Kuzucu", src: "/logo/yayinlar/sinan-kuzucu.png", fit: "contain" },
+  { name: "Fenomen", src: "/logo/yayinlar/fenomen.png", fit: "contain" },
+  { name: "Nar Test", src: "/logo/yayinlar/nar-test.png", fit: "contain" },
+  { name: "Ankara Yayınları", src: "/logo/yayinlar/ankara.png", fit: "contain" },
+  { name: "Hız Yayınları", src: "/logo/yayinlar/hiz.png", fit: "contain", tone: "sun" },
+  { name: "Çanta Yayınları", src: "/logo/yayinlar/canta.png", fit: "contain" },
+  { name: "Günay" },
+  { name: "Palme", src: "/logo/yayinlar/palme.png", fit: "contain", tone: "ink" },
+  { name: "Karekök", src: "/logo/yayinlar/karekok.png", fit: "contain" },
+  { name: "Mozaik", src: "/logo/yayinlar/mozaik.png", fit: "cover" },
+];
+
 export const denemeClub = {
   href: "/deneme",
   eyebrow: "Haftalık Deneme",
@@ -212,20 +234,7 @@ export const denemeClub = {
     eyebrow: "Deneme yayınları",
     title: "Haftanın kâğıdı",
     note: "Özdebir’den Mozaik’e, ve daha fazlası. Yayınevi değişir; açık konu sonraki denemeye yazılır.",
-    houses: [
-      { name: "Özdebir", src: "/logo/yayinlar/ozdebir.png", fit: "contain" },
-      { name: "Töder", src: "/logo/yayinlar/toder.png", fit: "contain" },
-      { name: "Sinan Kuzucu", src: "/logo/yayinlar/sinan-kuzucu.png", fit: "contain" },
-      { name: "Fenomen", src: "/logo/yayinlar/fenomen.png", fit: "contain" },
-      { name: "Nar Test", src: "/logo/yayinlar/nar-test.png", fit: "contain" },
-      { name: "Ankara Yayınları", src: "/logo/yayinlar/ankara.png", fit: "contain" },
-      { name: "Hız Yayınları", src: "/logo/yayinlar/hiz.png", fit: "contain", tone: "sun" },
-      { name: "Çanta Yayınları", src: "/logo/yayinlar/canta.png", fit: "contain" },
-      { name: "Günay" },
-      { name: "Palme", src: "/logo/yayinlar/palme.png", fit: "contain", tone: "ink" },
-      { name: "Karekök", src: "/logo/yayinlar/karekok.png", fit: "contain" },
-      { name: "Mozaik", src: "/logo/yayinlar/mozaik.png", fit: "cover" },
-    ],
+    houses: denemePublisherHouses,
   },
   intro:
     "Deneme, puan almak için değil; hangi konunun düştüğünü görmek için. Atlas VIP’te kâğıt bittikten sonra iş başlar.",
