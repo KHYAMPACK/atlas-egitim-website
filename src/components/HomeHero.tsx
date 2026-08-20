@@ -14,7 +14,7 @@ export function HomeHero() {
 
         <div className="mt-7 max-w-[40rem] text-center md:mt-8">
           <h1 className="font-[family-name:var(--font-display)] text-[clamp(2.1rem,5.6vw,4.35rem)] leading-[1.05] font-bold tracking-[-0.045em]">
-            Geleceğe Hazırlayan Kurum.
+            Geleceğe Hazırlayan Kurum
           </h1>
           <p className="mt-4 text-[0.98rem] leading-relaxed text-white/80 md:text-lg">
             5–8. sınıf LGS, okul ve bursluluk kurslarımızla öğrencilerimizi başarıya hazırlıyoruz.

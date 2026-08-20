@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Sans, Source_Sans_3 } from "next/font/google";
 import { ConversionRails } from "@/components/ConversionRails";
+import { DenemeFloat } from "@/components/DenemeFloat";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <ConversionRails />
+        <DenemeFloat />
         <LeadPopup />
       </body>
     </html>

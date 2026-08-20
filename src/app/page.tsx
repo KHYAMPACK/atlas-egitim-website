@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CloseSupport } from "@/components/CloseSupport";
+import { DenemeClubPromo } from "@/components/DenemeClubPromo";
 import { ExamResults } from "@/components/ExamResults";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { GradeStrip } from "@/components/GradeStrip";
 import { HomeHero } from "@/components/HomeHero";
-import { JourneyMap } from "@/components/JourneyMap";
 import { LeadBand } from "@/components/LeadBand";
 import { LgsGuide } from "@/components/LgsGuide";
 import { LocalInfo } from "@/components/LocalInfo";
@@ -28,13 +28,13 @@ export default function HomePage() {
       <HomeHero />
       <LeadBand title="Hemen İletişime Geçin" intent="kayit" tone="navy" />
       <LocalInfo variant="lgs" />
+      <DenemeClubPromo />
       <LgsGuide />
       <MethodStrip />
       <GradeStrip />
       <ProgramsBand />
       <WhyAtlas />
       <ExamResults />
-      <JourneyMap />
       <StaffUnits />
       <CloseSupport />
 

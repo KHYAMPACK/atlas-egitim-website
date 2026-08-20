@@ -16,21 +16,16 @@ export function ExamResults() {
           {examResults.items.map((item) => (
             <li key={item.name} className="min-w-[17.5rem] snap-start lg:min-w-0">
               <article className="flex h-full flex-col rounded-[1.5rem] bg-[var(--foam)] p-6 text-[var(--ink)] shadow-[0_18px_44px_-28px_rgba(0,0,0,0.45)]">
-                <p className="text-xs font-semibold tracking-[0.14em] text-[var(--signal)]">{examResults.eyebrow}</p>
-                <p className="mt-4 font-[family-name:var(--font-display)] text-[2.65rem] leading-none tracking-tight">
+                <p className="font-[family-name:var(--font-display)] text-[2.65rem] leading-none tracking-tight">
                   {item.score}
                 </p>
                 <p className="mt-1 text-sm text-[var(--muted)]">puan</p>
                 <h3 className="mt-5 text-lg font-semibold">{item.name}</h3>
                 <p className="mt-1 text-sm leading-snug text-[var(--muted)]">{item.school}</p>
-                <ul className="mt-5 grid grid-cols-3 gap-2 border-t border-[var(--line)] pt-4">
-                  {item.nets.map((net) => (
-                    <li key={net.label} className="text-center">
-                      <p className="text-[11px] font-semibold tracking-wide text-[var(--muted)]">{net.label}</p>
-                      <p className="mt-1 text-sm font-semibold tabular-nums">{net.value}</p>
-                    </li>
-                  ))}
-                </ul>
+                <div className="mt-5 border-t border-[var(--line)] pt-4">
+                  <p className="text-[11px] font-semibold tracking-wide text-[var(--muted)]">yüzdelik</p>
+                  <p className="mt-1 text-sm font-semibold tabular-nums">{item.percentile}</p>
+                </div>
               </article>
             </li>
           ))}

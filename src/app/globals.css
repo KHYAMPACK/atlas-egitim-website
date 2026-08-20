@@ -212,6 +212,50 @@ iframe {
   background: var(--navy-deep);
 }
 
+.deneme-float {
+  position: fixed;
+  right: 1rem;
+  bottom: calc(4.35rem + 0.9rem);
+  z-index: 55;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.85rem;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  background: var(--signal);
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  box-shadow: 0 12px 28px -12px rgb(196 30 42 / 0.7);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.deneme-float:hover {
+  background: var(--signal-deep);
+}
+
+.deneme-float-label {
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .deneme-float {
+    right: 1.5rem;
+    bottom: 1.5rem;
+    min-height: 3.1rem;
+    padding: 0.75rem 1.15rem;
+    font-size: 0.92rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .deneme-float:hover {
+    transform: translateY(-2px);
+  }
+}
+
 .lead-select {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%235e6774' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
@@ -471,7 +515,12 @@ iframe {
   .btn,
   .island,
   .island-wing-inner,
-  .island-action {
+  .island-action,
+  .deneme-float {
     transition: none;
+  }
+
+  .deneme-float:hover {
+    transform: none;
   }
 }

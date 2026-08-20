@@ -61,7 +61,7 @@ export const gradeCards = [
 export const navLinks = [
   { href: "/", label: "Anasayfa" },
   { href: "/programlar", label: "Programlar" },
-  { href: "/yolculuk", label: "100 Gün" },
+  { href: "/deneme", label: "Deneme Kulübü" },
   { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/iletisim", label: "İletişim" },
 ] as const;
@@ -72,7 +72,7 @@ export const islandNav = {
     { href: "/hakkimizda", label: "Kurumsal" },
   ],
   right: [
-    { href: "/yolculuk", label: "Yolculuk" },
+    { href: "/deneme", label: "Deneme" },
     { href: "/iletisim", label: "İletişim" },
   ],
 } as const;
@@ -198,36 +198,67 @@ export function getProgram(slug: string) {
   return programs.find((program) => program.slug === slug);
 }
 
-export const journey = {
-  eyebrow: "100 gün",
-  title: "100 Günlük Akademi Yolculuğu",
+export const denemeClub = {
+  href: "/deneme",
+  eyebrow: "Haftalık Deneme",
+  title: "Deneme Kulübü",
+  heading: "Kâğıt Biter, Konu Kalır",
+  promo: {
+    p1: "**Deneme Kulübü**, sınav oturuşunu haftalık alışkanlık yapar. Süre, boş bırakma, yanlışın arkasındaki konu — hepsi aynı kâğıtta görünür.",
+    p2: "Sonuç tek not olarak kalmaz. Düşen konular **ertesi haftanın tekrar listesidir**. Süre yetmeyen öğrenciye **hızlı okuma** ayrı hat.",
+    cta: "Deneme Kulübü’nü İncele",
+  },
+  publishers: {
+    eyebrow: "Deneme yayınları",
+    title: "Haftanın kâğıdı",
+    note: "Özdebir’den Mozaik’e, ve daha fazlası. Yayınevi değişir; açık konu sonraki denemeye yazılır.",
+    houses: [
+      { name: "Özdebir", src: "/logo/yayinlar/ozdebir.png", fit: "contain" },
+      { name: "Töder", src: "/logo/yayinlar/toder.png", fit: "contain" },
+      { name: "Sinan Kuzucu", src: "/logo/yayinlar/sinan-kuzucu.png", fit: "contain" },
+      { name: "Fenomen", src: "/logo/yayinlar/fenomen.png", fit: "contain" },
+      { name: "Nar Test", src: "/logo/yayinlar/nar-test.png", fit: "contain" },
+      { name: "Ankara Yayınları", src: "/logo/yayinlar/ankara.png", fit: "contain" },
+      { name: "Hız Yayınları", src: "/logo/yayinlar/hiz.png", fit: "contain", tone: "sun" },
+      { name: "Çanta Yayınları", src: "/logo/yayinlar/canta.png", fit: "contain" },
+      { name: "Günay" },
+      { name: "Palme", src: "/logo/yayinlar/palme.png", fit: "contain", tone: "ink" },
+      { name: "Karekök", src: "/logo/yayinlar/karekok.png", fit: "contain" },
+      { name: "Mozaik", src: "/logo/yayinlar/mozaik.png", fit: "cover" },
+    ],
+  },
   intro:
-    "Sınava kalan günü şansa bırakmıyoruz. Öğrencinin durduğu yerden sınav sabahına kadar her aralık planlanır.",
-  stages: [
+    "Deneme, puan almak için değil; hangi konunun düştüğünü görmek için. Atlas VIP’te kâğıt bittikten sonra iş başlar.",
+  points: [
     {
-      days: "1–20",
-      title: "Seviye Tespiti",
-      text: "Tanışma, konu bazlı ölçüm ve kişiye özel çalışma planı. Rotanın ilk noktası burası.",
+      title: "Sınav Günü Ritmi",
+      text: "Süre, oturuş, boş bırakma. Evde çözülen test bunu göstermez; deneme günü gösterir.",
     },
     {
-      days: "21–45",
-      title: "Konu Tekrarı",
-      text: "Açık konular kapanır. Düzenli test ve küçük ölçekli haftalık değerlendirme.",
+      title: "Net Değil Konu Listesi",
+      text: "Velinin eline tek skor değil, düşen konuların listesi gider. Ertesi haftanın işi bu listedir.",
     },
     {
-      days: "46–70",
-      title: "Deneme Kulübü",
-      text: "Haftalık denemeler başlar. Yanlışlar konu konu toplanır, sonraki haftanın tekrarına girer.",
+      title: "Hızlı Okuma Hattı",
+      text: "Paragraf ve süre sorunu olan öğrenciye ayrı seans. Deneme temposu tek başına yetmezse bu katman eklenir.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Deneme Kulübü kimlere açık?",
+      a: "5–8. sınıf. LGS programındaki öğrenci devam eder; yalnızca deneme hattını isteyen veli de yazabilir.",
     },
     {
-      days: "71–90",
-      title: "Hız Ve Strateji",
-      text: "Zaman yönetimi, soru çözüm sırası. Gerekirse hızlı okuma ile tempo yükselir.",
+      q: "Sonuç velilere nasıl gider?",
+      a: "Tek not bırakılmaz. Hangi konunun açık olduğu not edilir; görüşmede bu liste üzerinden konuşulur.",
     },
     {
-      days: "91–100",
-      title: "Sınava Hazır",
-      text: "Genel tekrar ve motivasyon koçluğu. Süreç, sınav sabahına kadar taşınır.",
+      q: "Hızlı okuma zorunlu mu?",
+      a: "Hayır. Süre ve paragraf sorunu olan öğrenciye eklenir. Deneme asıl hattır.",
+    },
+    {
+      q: "Haftada kaç deneme var?",
+      a: "Ritim haftalıktır. Sınıf ve döneme göre gün netleşir; güncel takvim için arayın.",
     },
   ],
 } as const;
@@ -235,67 +266,25 @@ export const journey = {
 export const examResults = {
   eyebrow: "LGS 2026",
   title: "Öğrencilerimiz Sınavda Bunu Yaptı",
-  intro: "Puan, net ve yerleşilen lise. Soyadlar kısaltılır.",
+  intro: "Puan, yüzdelik dilim ve yerleşilen lise. Soyadlar kısaltılır.",
   items: [
     {
-      name: "Elif Y.",
-      score: "478,62",
-      school: "Denizli Fen Lisesi",
-      nets: [
-        { label: "Mat", value: "19,50" },
-        { label: "Fen", value: "19,00" },
-        { label: "Türkçe", value: "19,25" },
-      ],
+      name: "Mert E.",
+      score: "472,36",
+      school: "Erbakır Fen Lisesi",
+      percentile: "%0,52",
     },
     {
-      name: "Mert A.",
-      score: "461,18",
-      school: "Pamukkale Anadolu Lisesi",
-      nets: [
-        { label: "Mat", value: "18,75" },
-        { label: "Fen", value: "18,50" },
-        { label: "Türkçe", value: "18,00" },
-      ],
+      name: "Rüya M.",
+      score: "455,53",
+      school: "Lütfi Ege Anadolu Lisesi",
+      percentile: "%3,47",
     },
     {
-      name: "Zeynep K.",
-      score: "452,40",
-      school: "Servergazi Anadolu Lisesi",
-      nets: [
-        { label: "Mat", value: "18,00" },
-        { label: "Fen", value: "17,75" },
-        { label: "Türkçe", value: "19,00" },
-      ],
-    },
-    {
-      name: "Ege S.",
-      score: "444,91",
-      school: "Merkezefendi Anadolu Lisesi",
-      nets: [
-        { label: "Mat", value: "17,50" },
-        { label: "Fen", value: "17,25" },
-        { label: "Türkçe", value: "18,50" },
-      ],
-    },
-    {
-      name: "Defne T.",
-      score: "436,27",
-      school: "Denizli Anadolu Lisesi",
-      nets: [
-        { label: "Mat", value: "16,75" },
-        { label: "Fen", value: "17,00" },
-        { label: "Türkçe", value: "18,75" },
-      ],
-    },
-    {
-      name: "Arda B.",
-      score: "421,55",
-      school: "Tavas Fen Lisesi",
-      nets: [
-        { label: "Mat", value: "16,50" },
-        { label: "Fen", value: "16,25" },
-        { label: "Türkçe", value: "17,50" },
-      ],
+      name: "Zeynep G.",
+      score: "428,71",
+      school: "Denizli İbrahim Çinkaya Sosyal Bilimler Lisesi",
+      percentile: "%5,62",
     },
   ],
 } as const;
@@ -338,8 +327,8 @@ export const lgsGuide = {
     eyebrow: "LGS Rehberi",
     title: "Gerzele LGS Kursu",
     subtitle: "Denizli LGS Hazırlık Kursu",
-    p1: "**Gerzele LGS kursu** arayan öğrenciler ve veliler için Atlas VIP, Merkezefendi’deki konumu ve **küçük grup** yapısıyla planlı bir hazırlık süreci sunar. LGS, ortaokuldan liseye geçişte uygulanan sınavdır; konu, soru ve deneme aynı haftanın içinde kapanır.",
-    p2: "**Denizli LGS hazırlık kursu** arayışında olan aileler için bu süreç konu anlatımı, soru çözümü, **deneme sınavları**, öğrenci takibi ve rehberlikle birlikte yürür.",
+    p1: "**Gerzele LGS kursu** arayan öğrenciler ve veliler için Atlas VIP, Merkezefendi’deki konumu, **grup ve özel ders** konseptiyle planlı bir hazırlık süreci sunar. LGS sürecinde akademik dersler, soru çözümleri ve **haftalık deneme sınavları** ile öğrencinin sınav sistemine uygun hazırlanması sağlanır.",
+    p2: "**Denizli LGS hazırlık kursu** arayışında olan aileler için bireysel eğitim koçluğu ile **sınav sistemi** için özel hazırlık yapılır.",
   },
   process: {
     title: "8. Sınıf LGS Hazırlık Süreci Nasıl Olmalıdır?",
@@ -361,28 +350,64 @@ export const lgsGuide = {
     title: "LGS Kursumuzda Neler Sunuyoruz?",
     items: [
       {
+        icon: "attendance",
         title: "Devam Takibi",
         text: "Öğrencinin devamı düzenli izlenir. Gerekince veliye haber verilir.",
       },
       {
+        icon: "guidance",
         title: "Rehberlik Desteği",
         text: "Koçlukla başarı grafiği, çalışma düzeni ve sınav motivasyonu takip edilir.",
       },
       {
+        icon: "teachers",
         title: "Uzman Öğretmen Kadrosu",
         text: "Fen, matematik ve sözel. Konu öğrenilmeden geçilmez.",
       },
       {
+        icon: "homework",
         title: "Ödev Kontrolü",
         text: "Ödev ayrıntılı kontrol edilir. Çalışma disiplini haftalık izlenir.",
       },
       {
+        icon: "parents",
         title: "Veli Bilgilendirme",
         text: "Veliler akademik durum, deneme ve açık konular hakkında sık haberdar edilir.",
       },
       {
+        icon: "materials",
         title: "Güçlü Materyal Desteği",
         text: "Süreç kitap, soru bankası, deneme ve ek çalışmalarla desteklenir.",
+      },
+      {
+        icon: "moxo",
+        title: "Moxo Testleri",
+        text: "Dikkat süresi bilgisayarda ölçülür. Odak nerede kopuyor, kâğıt üzerinde tahmin edilmez.",
+      },
+      {
+        icon: "attentioner",
+        title: "Attentioner Dikkat Programı",
+        text: "Dikkat bir kez test edilmez; programla çalışılır. Tempo ve sürdürme kası burada büyür.",
+      },
+      {
+        icon: "coach",
+        title: "Dikkat Koçluğu",
+        text: "Oturuş, geri dönüş, dağılan dakikalar. Koçluk konuyu değil, kâğıtta kalmayı takip eder.",
+      },
+      {
+        icon: "attention-test",
+        title: "Dikkat Testleri",
+        text: "Dikkat ölçülür, tahmin edilmez. Sonuç haftalık plana yazılır.",
+      },
+      {
+        icon: "growth",
+        title: "Gelişim Testleri",
+        text: "Öğrenci şimdi nerede, geçen döneme göre ne değişti. Seviye sloganla değil testle görülür.",
+      },
+      {
+        icon: "focus",
+        title: "Odaklanma Çalışmaları",
+        text: "Soruda kalma kısa çalışmalarla alışır. Sınav oturuşu konu kadar odak işidir.",
       },
     ],
   },
@@ -393,30 +418,34 @@ export const lgsGuide = {
   },
 } as const;
 
-export const units = [
+export const staff = [
   {
     code: "FEN",
-    title: "Fen Bilimleri Birimi",
+    name: "",
+    title: "Fen Bilimleri Öğretmeni",
     field: "LGS fen",
-    text: "Deneysel konu, grafik ve yorum. Ezber değil, soru diline alışmak.",
+    photo: "/photos/staff/fen.png",
   },
   {
     code: "MAT",
-    title: "Matematik Birimi",
+    name: "",
+    title: "Matematik Öğretmeni",
     field: "LGS matematik",
-    text: "İşlem hızı ve kavram. Yanlışın kaynağı bulunur, aynı hata tekrar etmesin diye kapanır.",
+    photo: "/photos/staff/mat.png",
   },
   {
     code: "SOZ",
-    title: "Sözel Bölümler",
+    name: "",
+    title: "Sözel Öğretmeni",
     field: "Türkçe · sosyal · İngilizce",
-    text: "Paragraf, kronoloji, dil bilgisi. Okuma temposu ve anlamayı birlikte büyütürüz.",
+    photo: "/photos/staff/sozel.png",
   },
   {
     code: "KOC",
+    name: "",
     title: "Koçluk Ve Rehberlik",
     field: "Mentörlük",
-    text: "Tempo, motivasyon, sınav haftası. Akademik planın yanında duran hat.",
+    photo: "/photos/staff/koc.png",
   },
 ] as const;
 
@@ -472,7 +501,7 @@ export const faqs = [
 export const aboutStats = [
   { value: "5–8", label: "Sınıf", text: "LGS’ye giden ortaokul" },
   { value: "4", label: "Program", text: "LGS, yazılı, yaz, deneme" },
-  { value: "100", label: "Gün", text: "Seviyeden sınav sabahına" },
+  { value: "Haftalık", label: "Deneme", text: "Kulüpte kâğıt, konu konu net" },
   { value: "4", label: "Kadro", text: "Fen, matematik, sözel, koçluk" },
 ] as const;
 

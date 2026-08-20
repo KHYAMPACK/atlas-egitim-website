@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/hakkimizda",
     "/programlar",
-    "/yolculuk",
+    "/deneme",
     "/sss",
     "/iletisim",
     "/gizlilik",
@@ -16,6 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${site.url}${route}`,
     changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : route.startsWith("/programlar/") ? 0.8 : 0.7,
+    priority: route === "" ? 1 : route.startsWith("/programlar/") || route === "/deneme" ? 0.8 : 0.7,
   }));
 }
