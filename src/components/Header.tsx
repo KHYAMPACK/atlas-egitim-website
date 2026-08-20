@@ -61,7 +61,7 @@ export function Header() {
                 <div className="island-wing-inner">
                   <Link
                     href="/iletisim"
-                    className="island-extras island-action island-action-promo"
+                    className="island-extras island-action island-action-promo max-md:hidden"
                     tabIndex={open ? undefined : -1}
                   >
                     {site.headerPromo}

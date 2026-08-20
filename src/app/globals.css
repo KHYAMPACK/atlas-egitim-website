@@ -337,12 +337,14 @@ iframe {
 
 .island-wing-left .island-wing-inner {
   justify-content: flex-end;
-  padding-left: 0.55rem;
+  padding-left: 0.4rem;
+  padding-right: 0.15rem;
 }
 
 .island-wing-right .island-wing-inner {
   justify-content: flex-start;
-  padding-right: 0.55rem;
+  padding-right: 0.4rem;
+  padding-left: 0.15rem;
 }
 
 .island-slot {
@@ -377,6 +379,10 @@ iframe {
   align-items: center;
 }
 
+.island-extras.island-action {
+  display: none;
+}
+
 .island-rule {
   width: 1px;
   height: 1rem;
@@ -387,8 +393,8 @@ iframe {
   display: inline-flex;
   min-height: 2.75rem;
   align-items: center;
-  padding-inline: 0.4rem;
-  font-size: 0.72rem;
+  padding-inline: 0.38rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   color: rgb(255 255 255 / 0.92);
@@ -466,7 +472,8 @@ iframe {
     --island-logo: 3.15rem;
   }
 
-  .island-extras {
+  .island-extras,
+  .island-extras.island-action {
     display: flex;
   }
 
