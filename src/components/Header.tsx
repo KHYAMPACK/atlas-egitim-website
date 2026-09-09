@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logo } from "@/components/Logo";
-import { VeliInstallCta } from "@/components/VeliInstallCta";
 import { islandNav, site, whatsappLink } from "@/lib/site";
 
 const SCROLL_IDLE_MS = 320;
@@ -75,7 +74,6 @@ export function Header() {
                       </Link>
                     ))}
                   </nav>
-                  <VeliInstallCta variant="header" tabIndex={open ? undefined : -1} />
                 </div>
               </div>
 

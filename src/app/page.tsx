@@ -7,6 +7,7 @@ import { FaqAccordion } from "@/components/FaqAccordion";
 import { GradeStrip } from "@/components/GradeStrip";
 import { HomeHero } from "@/components/HomeHero";
 import { LeadBand } from "@/components/LeadBand";
+import { VeliAppSection } from "@/components/VeliAppSection";
 import { LgsGuide } from "@/components/LgsGuide";
 import { LocalInfo } from "@/components/LocalInfo";
 import { MethodStrip } from "@/components/MethodStrip";
@@ -26,6 +27,7 @@ export default function HomePage() {
   return (
     <>
       <HomeHero />
+      <VeliAppSection />
       <LeadBand title="Hemen İletişime Geçin" intent="kayit" tone="navy" />
       <LocalInfo variant="lgs" />
       <DenemeClubPromo />

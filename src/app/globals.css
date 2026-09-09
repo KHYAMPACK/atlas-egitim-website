@@ -458,14 +458,6 @@ iframe {
   color: #fff;
 }
 
-.island-action-app {
-  background: #fff;
-  color: var(--navy);
-  min-height: 1.85rem;
-  padding: 0 0.62rem;
-  margin-left: 0.15rem;
-}
-
 .island-wa-full {
   display: none;
 }
@@ -494,12 +486,6 @@ iframe {
     min-height: 2.25rem;
     padding: 0 0.85rem;
     font-size: 0.74rem;
-  }
-
-  .island-action-app {
-    min-height: 2.25rem;
-    padding: 0 0.85rem;
-    margin-left: 0;
   }
 
   .island-wing-left .island-wing-inner {

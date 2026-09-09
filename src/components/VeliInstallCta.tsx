@@ -1,48 +1,23 @@
-import { site } from "@/lib/site";
+import { site, veliApp } from "@/lib/site";
 
-type Variant = "hero" | "header" | "footer";
-
-export function VeliInstallCta({
-  variant,
-  tabIndex,
-}: {
-  variant: Variant;
-  tabIndex?: number;
-}) {
-  if (variant === "header") {
-    return (
-      <a
-        href={site.veliInstallUrl}
-        className="island-action island-action-app"
-        aria-label="Veli uygulamasını yükle"
-        title="Veli uygulamasını yükle"
-        tabIndex={tabIndex}
-      >
-        <InstallGlyph />
-        <span>Veli</span>
-      </a>
-    );
-  }
-
+export function VeliInstallCta({ variant }: { variant: "section" | "footer" }) {
   if (variant === "footer") {
     return (
       <a href={site.veliInstallUrl} className="btn btn-navy">
         <InstallGlyph />
-        Veli uygulamasını yükle
+        {veliApp.cta}
       </a>
     );
   }
 
   return (
-    <div className="mt-7 flex w-full max-w-[22rem] flex-col items-center md:mt-8">
-      <a href={site.veliInstallUrl} className="btn btn-signal w-full min-h-[3.15rem] text-[1.02rem] shadow-[0_12px_28px_-12px_rgb(196_30_42_/_0.7)]">
+    <div className="mt-8">
+      <a href={site.veliInstallUrl} className="btn btn-signal min-h-[3.15rem] w-full text-[1.02rem] shadow-[0_12px_28px_-12px_rgb(196_30_42_/_0.7)] sm:w-auto">
         <InstallGlyph />
-        Veli uygulamasını yükle
+        {veliApp.cta}
       </a>
-      <p className="mt-3 text-sm font-medium text-white/80">Telefonuna veya bilgisayarına ekle</p>
-      <p className="mt-1.5 text-center text-[0.8rem] leading-relaxed text-white/55">
-        Yükleme veli uygulaması sayfasında açılır. iPhone’da Paylaş → Ana Ekrana Ekle.
-      </p>
+      <p className="mt-3 text-sm font-medium text-[var(--muted)]">{veliApp.helper}</p>
+      <p className="mt-1.5 max-w-md text-[0.8rem] leading-relaxed text-[var(--muted)]">{veliApp.note}</p>
     </div>
   );
 }

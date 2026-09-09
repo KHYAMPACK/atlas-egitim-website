@@ -15,6 +15,7 @@ export const site = {
   },
   instagram: "atlasegitimkurumu",
   instagramUrl: "https://www.instagram.com/atlasegitimkurumu/",
+  veliPortalUrl: "https://veli.atlasegitimkurumu.com",
   veliInstallUrl: "https://veli.atlasegitimkurumu.com/?install=1",
   mapsUrl: "https://share.google/e8Tvt7nEHjkweztJJ",
   mapsEmbedUrl: "https://maps.google.com/maps?cid=7138756478941079489&hl=tr&z=17&output=embed",
@@ -26,6 +27,32 @@ export const site = {
   grades: "5–8. sınıf",
   url: "https://atlasegitimkurumu.com",
   headerPromo: "Erken Kayıt Avantajları Devam Ediyor",
+} as const;
+
+export const veliApp = {
+  eyebrow: "Veli uygulaması",
+  title: "Öğrenci Ve Veli Bilgilendirme",
+  heading: "Başarı takibi ailenin elinde",
+  p1: "Atlas veli uygulaması, öğrencinin **devamını**, **deneme netini** ve **açık konularını** aynı listede tutar.",
+  p2: "Görüşmede ‘iyi gidiyor’ demeyiz. Evde de aynı özet durur.",
+  features: [
+    { title: "Devam durumu", text: "Geldi, gelmedi. Gerekince haber düşer." },
+    { title: "Deneme özeti", text: "Tek skor değil; düşen konuların listesi." },
+    { title: "Konu takibi", text: "Hangisi kapandı, hangisi açık — net." },
+  ],
+  snapshot: {
+    label: "Bu hafta",
+    title: "Veli özeti",
+    rows: [
+      { k: "Devam", v: "Güncel yoklama" },
+      { k: "Deneme", v: "Konu konu net" },
+      { k: "Açık konu", v: "Haftalık liste" },
+    ],
+  },
+  cta: "Veli uygulamasını yükle",
+  helper: "Telefonuna veya bilgisayarına ekle",
+  note: "Yükleme veli uygulaması sayfasında açılır. iPhone’da Paylaş → Ana Ekrana Ekle.",
+  login: "Veli girişi",
 } as const;
 
 export const gradeCards = [
