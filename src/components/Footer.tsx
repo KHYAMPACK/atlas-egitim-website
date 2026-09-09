@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { VeliInstallCta } from "@/components/VeliInstallCta";
 import { navLinks, site, whatsappLink } from "@/lib/site";
 
 export function Footer() {
@@ -10,6 +11,9 @@ export function Footer() {
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-[var(--muted)]">
             Gerzele’de 5–8. sınıf LGS hazırlığı. Küçük grup, haftalık deneme.
           </p>
+          <div className="mt-5">
+            <VeliInstallCta variant="footer" />
+          </div>
         </div>
         <div>
           <ul className="space-y-2 text-sm">

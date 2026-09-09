@@ -15,6 +15,7 @@ export const site = {
   },
   instagram: "atlasegitimkurumu",
   instagramUrl: "https://www.instagram.com/atlasegitimkurumu/",
+  veliInstallUrl: "https://veli.atlasegitimkurumu.com/?install=1",
   mapsUrl: "https://share.google/e8Tvt7nEHjkweztJJ",
   mapsEmbedUrl: "https://maps.google.com/maps?cid=7138756478941079489&hl=tr&z=17&output=embed",
   hours: [

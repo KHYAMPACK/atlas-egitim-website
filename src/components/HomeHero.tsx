@@ -1,4 +1,5 @@
 import { Logo } from "@/components/Logo";
+import { VeliInstallCta } from "@/components/VeliInstallCta";
 
 export function HomeHero() {
   return (
@@ -20,6 +21,8 @@ export function HomeHero() {
             5–8. sınıf LGS, okul ve bursluluk kurslarımızla öğrencilerimizi başarıya hazırlıyoruz.
           </p>
         </div>
+
+        <VeliInstallCta variant="hero" />
       </div>
     </section>
   );
