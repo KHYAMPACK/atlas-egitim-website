@@ -9,7 +9,7 @@
 - Pages: home, about, programs (with a dynamic page per program), mock exam club (`/deneme`), FAQ, contact, privacy
 - Conversion-focused: lead forms, lead pop-up, lead band, floating WhatsApp and call actions
 - Content sections: exam results, LGS guide, method, staff units, grade-by-grade paths
-- **Parent app section:** promotes and links to the school's parent app, which runs on the [student tracking & parent notification system](https://github.com/KHYAMPACK/day_care) I built for them
+- **Parent app section:** promotes and links to the school's parent app, which runs on the [student tracking & parent notification system](https://github.com/KHYAMPACK/student-tracking-app) I built for them
 - SEO: JSON-LD, generated Open Graph images, sitemap
 
 **Stack:** Next.js (App Router) · React · TypeScript · Tailwind CSS · GSAP / Motion · Vercel
